@@ -261,31 +261,6 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   {
-    'benlubas/molten-nvim',
-    dependencies = { '3rd/image.nvim' },
-    version = '^1.0.0',
-    build = ':UpdateRemotePlugins',
-    init = function()
-      -- these are examples, not defaults. Please see the readme
-      vim.g.molten_image_provider = 'image.nvim'
-      vim.g.molten_output_win_max_height = 20
-    end,
-  },
-  {
-    '3rd/image.nvim',
-    version = '1.1.0',
-    opts = {
-      backend = 'kitty', -- whatever backend you would like to use
-      processor = 'magick_cli',
-      max_width = 100,
-      max_height = 12,
-      max_height_window_percentage = math.huge,
-      max_width_window_percentage = math.huge,
-      window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
-      window_overlap_clear_ft_ignore = { 'cmp_menu', 'cmp_docs', '' },
-    },
-  },
-  {
     'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
     opts = {
       auto_cmd = true, -- Set to false to disable automatic execution
